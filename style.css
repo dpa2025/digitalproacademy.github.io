@@ -149,3 +149,34 @@ details p {
   font-size: 14px;
   color: #555;
 }
+
+/* === Hero Home === */
+.hero-home { padding: 64px 20px 36px; text-align: center; background: #fff; }
+.hero-home h2 { font-size: 36px; line-height: 1.2; margin: 0 0 8px; }
+.br-sm { display:none; }
+.sub { font-size: 18px; color:#333; max-width: 760px; margin: 0 auto 14px; }
+.center { justify-content:center; text-align:center; }
+.badges { display:flex; gap:12px; flex-wrap:wrap; justify-content:center; margin-top:10px; color:#333; }
+
+/* фіксуємо центрування існуючих рядів */
+.price-row.center, .timer-wrap.center, .cta-row.center { display:flex; justify-content:center; gap:12px; flex-wrap:wrap; }
+
+/* === Features === */
+.feature-grid { display:grid; grid-template-columns: repeat(3, 1fr); gap:16px; }
+.feature { padding:18px; border:1px solid #eee; border-radius:10px; background:#fff; }
+.feature h3 { margin:0 0 6px; }
+
+/* === Footer nav === */
+.site-footer { background:#111; color:#fff; margin-top:24px; }
+.site-footer a { color:#fff; text-decoration:none; }
+.footer-inner { display:grid; grid-template-columns: repeat(3, 1fr); gap:20px; padding:24px 0; }
+.footer-col h4 { margin:0 0 8px; }
+.footer-col ul { list-style:none; padding:0; margin:0; }
+.footer-col li { margin:6px 0; }
+.footer-bottom { border-top:1px solid rgba(255,255,255,.15); padding:14px 0; text-align:center; }
+
+@media (max-width: 760px){
+  .hero-home h2{ font-size:28px; }
+  .feature-grid{ grid-template-columns:1fr; }
+  .br-sm { display:inline; }
+}
