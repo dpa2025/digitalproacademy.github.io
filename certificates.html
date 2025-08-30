@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Сертифікати з ID — Digital Pro Academy</title>
+  <meta name="description" content="Сертифікати Digital Pro Academy з унікальним ID. Перевірка сертифіката за номером: підтвердження проходження курсу та автентичність.">
+  <meta name="keywords" content="сертифікат з ID, перевірити сертифікат, digital pro academy, smm сертифікат">
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="certificates.js"></script>
+</head>
+<body>
+<header>
+  <h1>Digital Pro Academy</h1>
+  <nav>
+    <a href="index.html">Головна</a>
+    <a href="courses.html">Курси</a>
+    <a href="certificates.html">Сертифікати</a>
+    <a href="contacts.html">Контакти</a>
+  </nav>
+</header>
+
+<main class="container">
+  <section class="certificate-hero">
+    <h2>Сертифікати з унікальним ID</h2>
+    <p>Кожен випускник отримує сертифікат з персональним <strong>ID‑номером</strong>, який можна перевірити онлайн.</p>
+  </section>
+
+  <section class="certificate-preview course-card">
+    <h3>Приклад сертифіката</h3>
+    <div class="cert-mock">
+      <div class="cert-head">Digital Pro Academy</div>
+      <div class="cert-body">
+        <div class="cert-title">Certificate of Completion</div>
+        <div class="cert-name">Ім’я Прізвище</div>
+        <div class="cert-course">Курс: <strong>SMM з нуля</strong></div>
+        <div class="cert-id">ID: <code>DPA‑SMM‑2025‑0001</code></div>
+        <div class="cert-date">Дата: 15.10.2025</div>
+      </div>
+      <div class="cert-foot">Підпис керівника програми • Печатка</div>
+    </div>
+    <p style="margin-top:10px">Дизайн сертифіката може незначно відрізнятися відображенням на друці.</p>
+  </section>
+
+  <section class="course-card">
+    <h3>Перевірка сертифіката</h3>
+    <p>Введіть ID сертифіката у форматі <code>DPA‑XXX‑YYYY‑NNNN</code> (наприклад, <code>DPA‑SMM‑2025‑0001</code>).</p>
+    <form id="verify-form" class="verify-form">
+      <input id="cert-id" type="text" placeholder="DPA‑SMM‑2025‑0001" required />
+      <button class="btn primary" type="submit">Перевірити</button>
+    </form>
+    <div id="verify-result" class="verify-result" aria-live="polite"></div>
+    <details style="margin-top:12px">
+      <summary>Як формується ID</summary>
+      <ul>
+        <li><b>DPA</b> — Digital Pro Academy</li>
+        <li><b>XXX</b> — код курсу (SMM / AI / DGT / PRO)</li>
+        <li><b>YYYY</b> — рік видачі</li>
+        <li><b>NNNN</b> — порядковий номер</li>
+      </ul>
+    </details>
+  </section>
+
+  <section class="course-card">
+    <h3>Отримайте сертифікат</h3>
+    <p>Після успішного завершення курсу й перевірки ДЗ ви отримуєте сертифікат з ID, який можна додати в LinkedIn/резюме.</p>
+    <a class="btn primary" href="courses.html">Обрати курс</a>
+  </section>
+</main>
+
+<footer>
+  <p>© 2025 Digital Pro Academy</p>
+</footer>
+</body>
+</html>
