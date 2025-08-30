@@ -96,3 +96,13 @@ details.program { margin-top:14px; }
 .verify-result.ok{ background:#e9f8ee; color:#145c2f; border:1px solid #bfe8ca; }
 .verify-result.warn{ background:#fff7e6; color:#8a5200; border:1px solid #f5d28b; }
 .verify-result.error{ background:#ffeaea; color:#8a1f1f; border:1px solid #f1b3b3; }
+
+/* === Contacts / Form === */
+.contact-form label { display:block; margin:10px 0; font-weight:600; }
+.contact-form input, .contact-form textarea {
+  width:100%; padding:10px 12px; border:1px solid #ddd; border-radius:8px;
+  font: 400 16px/1.4 'Segoe UI', sans-serif;
+}
+.grid2 { display:grid; grid-template-columns: 1fr 1fr; gap:12px; }
+.muted { color:#666; font-size:14px; }
+@media (max-width:700px){ .grid2{ grid-template-columns:1fr; } }
