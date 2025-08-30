@@ -54,3 +54,45 @@ footer {
   padding: 20px;
   font-size: 14px;
 }
+
+/* === Courses / Cards / Timer === */
+.container { max-width: 1000px; margin: 0 auto; padding: 24px; }
+.course-card { border: 1px solid #eee; border-radius: 10px; padding: 20px; margin: 18px 0; background: #fff; }
+.course-card.hot { box-shadow: 0 0 16px rgba(255,96,0,.2); }
+.course-head { display:flex; align-items:center; gap:12px; justify-content:space-between; }
+.badge { background:#FF6000; color:#fff; padding:6px 10px; border-radius:999px; font-size:12px; font-weight:700; }
+.lead { margin: 6px 0 14px; }
+.price-row { display:flex; align-items:baseline; gap:14px; margin: 6px 0 12px; }
+.price-row .old { text-decoration: line-through; color:#888; font-size:18px; }
+.price-row .new { color:#FF6000; font-weight:800; font-size:24px; }
+.timer-wrap { display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin:10px 0 12px; }
+.timer { font: 700 22px/1 monospace; padding:6px 10px; border:1px dashed #FF6000; border-radius:8px; }
+.spots .bar { height:10px; background:#f2f2f2; border-radius:999px; overflow:hidden; margin:6px 0; }
+.spots .bar span { display:block; height:100%; background:#FF6000; }
+.cta-row { display:flex; gap:12px; flex-wrap:wrap; margin: 10px 0; }
+.btn { display:inline-block; padding:12px 18px; border-radius:8px; background:#eee; color:#111; text-decoration:none; font-weight:700; }
+.btn.primary { background:#FF6000; color:#fff; box-shadow:0 0 10px rgba(255,96,0,.35); }
+.btn.ghost { background:transparent; border:2px solid #FF6000; color:#FF6000; }
+details.program { margin-top:14px; }
+@media (max-width:700px){ .price-row .new{font-size:22px} .timer{font-size:20px} }
+
+/* === Certificates === */
+.certificate-hero h2 { margin-bottom:6px; }
+.cert-mock{
+  border:2px solid #eee; border-radius:12px; padding:18px; background:#fff;
+}
+.cert-head{ font-weight:800; text-align:center; letter-spacing:.5px; }
+.cert-body{ padding:14px 0; text-align:center; }
+.cert-title{ font-size:22px; font-weight:800; margin-bottom:6px; }
+.cert-name{ font-size:18px; margin:6px 0; }
+.cert-course,.cert-id,.cert-date{ margin:4px 0; }
+.cert-foot{ text-align:center; font-size:12px; color:#666; margin-top:10px; }
+
+.verify-form{ display:flex; gap:10px; flex-wrap:wrap; margin:10px 0; }
+.verify-form input{
+  flex:1 1 260px; padding:10px 12px; border:1px solid #ddd; border-radius:8px;
+}
+.verify-result{ margin-top:8px; padding:10px 12px; border-radius:8px; }
+.verify-result.ok{ background:#e9f8ee; color:#145c2f; border:1px solid #bfe8ca; }
+.verify-result.warn{ background:#fff7e6; color:#8a5200; border:1px solid #f5d28b; }
+.verify-result.error{ background:#ffeaea; color:#8a1f1f; border:1px solid #f1b3b3; }
