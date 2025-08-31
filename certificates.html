@@ -2,61 +2,56 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Сертифікати з ID — Digital Pro Academy</title>
-  <meta name="description" content="Сертифікати Digital Pro Academy з унікальним ID. Перевірка сертифіката за номером: підтвердження проходження курсу та автентичність.">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Сертифікати з унікальним ID — Digital Pro Academy</title>
+  <meta name="description" content="Кожен випускник отримує сертифікат з персональним ID‑номером. Перевірка дійсності онлайн.">
   <link rel="stylesheet" href="style.css" />
-  <script defer src="certificates.js"></script>
 </head>
 <body>
 <header class="site-header">
   <a class="logo" href="index.html"><img src="img/logo.png" alt="Digital Pro Academy"></a>
   <nav>
-    <a href="index.html">Головна</a><a href="courses.html">Курси</a>
+    <a href="index.html">Головна</a><a href="courses.html">Курси</a><a href="shop.html">Магазин</a>
     <a href="certificates.html">Сертифікати</a><a href="contacts.html">Контакти</a><a href="zapytannya.html">Запитання</a>
   </nav>
 </header>
 
 <main class="container">
-  <section class="certificate-hero">
-    <h2>Сертифікати з унікальним ID</h2>
-    <p>Кожен випускник отримує сертифікат з персональним ID‑номером, який можна перевірити онлайн.</p>
-  </section>
+  <div class="section-title"><span class="dot"></span><h2>Сертифікати з унікальним ID</h2></div>
+  <p class="lead">Кожен випускник отримує сертифікат з персональним ID‑номером, який можна перевірити онлайн.</p>
 
   <section class="course-card">
     <h3>Приклад сертифіката</h3>
-    <div class="cert-preview">
-      <img src="img/certificates.png" alt="Приклад сертифіката Digital Pro Academy">
-    </div>
+    <img src="img/certificates.png" alt="Приклад сертифіката" style="width:100%;border-radius:12px;border:1px solid var(--stroke)">
   </section>
 
   <section class="course-card">
-    <h3>Перевірка сертифіката</h3>
-    <p>Введіть ID у форматі <code>DPA‑XXX‑YYYY‑NNNN</code> (наприклад, <code>DPA‑SMM‑2025‑0001</code>).</p>
-    <form id="verify-form" class="verify-form">
-      <input id="cert-id" type="text" placeholder="DPA‑SMM‑2025‑0001" required />
-      <button class="btn primary" type="submit">Перевірити</button>
-    </form>
-    <div id="verify-result" class="verify-result" aria-live="polite"></div>
+    <h3>Перевірити сертифікат</h3>
+    <p>Введіть ID сертифіката, або надішліть менеджеру — перевіримо протягом 1–12 годин.</p>
+    <div class="form-row">
+      <input id="certId" placeholder="Наприклад: DPA‑2025‑000123" />
+      <a class="btn primary" id="checkBtn" target="_blank" rel="noopener">Надіслати в Telegram</a>
+    </div>
+    <p class="muted" style="margin-top:8px">Натисніть кнопку — відкриється чат з попередньо заповненим повідомленням.</p>
   </section>
 </main>
 
 <footer class="site-footer">
   <div class="footer-inner container">
-    <div class="footer-col">
-      <h4>Академія</h4>
-      <ul><li><a href="index.html">Головна</a></li><li><a href="courses.html">Курси</a></li><li><a href="zapytannya.html">Запитання</a></li></ul>
-    </div>
-    <div class="footer-col">
-      <h4>Контакти</h4>
-      <ul><li><a href="https://t.me/digital_academy_administrator" target="_blank" rel="noopener">Telegram</a></li><li><a href="mailto:hello.digitalproacademy@gmail.com">Email</a></li></ul>
-    </div>
-    <div class="footer-col">
-      <h4>Сертифікати</h4>
-      <ul><li><a href="certificates.html">Перевірити сертифікат</a></li></ul>
-    </div>
+    <div class="footer-col"><h4>Академія</h4><ul><li><a href="index.html">Головна</a></li><li><a href="courses.html">Курси</a></li><li><a href="shop.html">Магазин</a></li></ul></div>
+    <div class="footer-col"><h4>Контакти</h4><ul><li><a target="_blank" rel="noopener" href="https://t.me/digital_academy_administrator">Telegram</a></li><li><a href="mailto:hello.digitalproacademy@gmail.com">Email</a></li></ul></div>
+    <div class="footer-col"><h4>Допомога</h4><ul><li><a href="zapytannya.html">Запитання</a></li></ul></div>
   </div>
   <div class="footer-bottom"><p>© 2025 Digital Pro Academy</p></div>
 </footer>
+
+<script>
+  const btn = document.getElementById('checkBtn');
+  btn.addEventListener('click', () => {
+    const id = encodeURIComponent(document.getElementById('certId').value || '');
+    btn.href = `https://t.me/digital_academy_administrator?text=Перевірка%20сертифіката:%20${id}`;
+  });
+</script>
 </body>
 </html>
+
