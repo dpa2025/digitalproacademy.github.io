@@ -128,3 +128,55 @@ body{
   .feature-grid{ grid-template-columns:1fr; }
   .br-sm { display:inline; }
 }
+/* === DARK THEME CUSTOM STYLES === */
+body {
+  background-color: #111;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+}
+
+a, .accent, strong {
+  color: #FF6000;
+}
+
+.site-header {
+  background-color: #000;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-header nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+.site-header img {
+  height: 48px;
+}
+
+button, .button, .btn {
+  background-color: #FF6000;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+#timer {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  background-color: transparent;
+}
