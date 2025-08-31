@@ -1,6 +1,5 @@
 document.getElementById('contact-form')?.addEventListener('submit', (e) => {
   e.preventDefault();
-
   const fd = new FormData(e.target);
   const name = fd.get('name');
   const email = fd.get('email');
@@ -17,7 +16,6 @@ document.getElementById('contact-form')?.addEventListener('submit', (e) => {
   ].join('%0D%0A');
 
   const link = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${body}`;
-
   const status = document.getElementById('contact-status');
   status.textContent = 'Відкриваємо ваш поштовий клієнт…';
   window.location.href = link;
