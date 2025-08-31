@@ -4,19 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Контакти — Digital Pro Academy</title>
-  <meta name="description" content="Зв’яжіться з Digital Pro Academy: запитання щодо курсів, оплати, сертифікатів. Напишіть у Telegram або залиште заявку через форму.">
-  <meta name="keywords" content="контакти, підтримка, telegram, форма зворотного зв’язку, digital pro academy">
+  <meta name="description" content="Задайте запитання у Telegram або через форму. Ми відповідаємо протягом 1–12 годин.">
   <link rel="stylesheet" href="style.css" />
   <script defer src="contact.js"></script>
 </head>
 <body>
-<header>
-  <h1>Digital Pro Academy</h1>
+<header class="site-header">
+  <a class="logo" href="index.html"><img src="img/logo.png" alt="Digital Pro Academy"></a>
   <nav>
-    <a href="index.html">Головна</a>
-    <a href="courses.html">Курси</a>
-    <a href="certificates.html">Сертифікати</a>
-    <a href="contacts.html">Контакти</a>
+    <a href="index.html">Головна</a><a href="courses.html">Курси</a>
+    <a href="certificates.html">Сертифікати</a><a href="contacts.html">Контакти</a><a href="zapytannya.html">Запитання</a>
   </nav>
 </header>
 
@@ -34,24 +31,11 @@
     <h3>Форма зворотного зв’язку</h3>
     <form id="contact-form" class="contact-form">
       <div class="grid2">
-        <label>
-          Ім’я
-          <input type="text" name="name" placeholder="Ваше ім’я" required />
-        </label>
-        <label>
-          Email
-          <input type="email" name="email" placeholder="name@email.com" required />
-        </label>
+        <label>Ім’я<input type="text" name="name" placeholder="Ваше ім’я" required /></label>
+        <label>Email<input type="email" name="email" placeholder="name@email.com" required /></label>
       </div>
-      <label>
-        Тема
-        <input type="text" name="subject" placeholder="Питання щодо курсу SMM з нуля" required />
-      </label>
-      <label>
-        Повідомлення
-        <textarea name="message" rows="5" placeholder="Ваше запитання…" required></textarea>
-      </label>
-
+      <label>Тема<input type="text" name="subject" placeholder="Питання щодо курсу SMM з нуля" required /></label>
+      <label>Повідомлення<textarea name="message" rows="5" placeholder="Ваше запитання…" required></textarea></label>
       <div class="cta-row">
         <button class="btn primary" type="submit">Надіслати</button>
         <span id="contact-status" class="muted"></span>
@@ -59,15 +43,25 @@
       <p class="muted">Натискаючи “Надіслати”, ви погоджуєтесь з умовами обробки даних.</p>
     </form>
   </section>
-
-  <section class="course-card">
-    <h3>Юридична інформація</h3>
-    <p>Digital Pro Academy — освітній проєкт. Оплата курсів доступна онлайн; електронні сертифікати з ID надаються після успішного проходження та перевірки ДЗ.</p>
-  </section>
 </main>
 
-<footer>
-  <p>© 2025 Digital Pro Academy</p>
+<footer class="site-footer">
+  <div class="footer-inner container">
+    <div class="footer-col">
+      <h4>Академія</h4>
+      <ul><li><a href="index.html">Головна</a></li><li><a href="courses.html">Курси</a></li><li><a href="zapytannya.html">Запитання</a></li></ul>
+    </div>
+    <div class="footer-col">
+      <h4>Контакти</h4>
+      <ul><li><a href="https://t.me/digital_academy_administrator" target="_blank" rel="noopener">Telegram</a></li><li><a href="mailto:hello.digitalproacademy@gmail.com">Email</a></li></ul>
+    </div>
+    <div class="footer-col">
+      <h4>Сертифікати</h4>
+      <ul><li><a href="certificates.html">Перевірити сертифікат</a></li></ul>
+    </div>
+  </div>
+  <div class="footer-bottom"><p>© 2025 Digital Pro Academy</p></div>
 </footer>
 </body>
 </html>
+
