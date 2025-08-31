@@ -1,29 +1,16 @@
-// Looping countdown 31h (1 day + 7h), updates all .countdown elements
-(function(){
-  const targets = Array.from(document.querySelectorAll('.countdown, #countdown'));
-  if (!targets.length) return;
-
-  const DURATION = (24 + 7) * 60 * 60 * 1000; // 31h
-  const KEY = 'dpa_loop31_start';
-
-  let start = localStorage.getItem(KEY);
-  if (!start){ start = Date.now().toString(); localStorage.setItem(KEY, start); }
-
-  function pad(n){ return String(n).padStart(2,'0'); }
-
-  function tick(){
-    const now = Date.now();
-    const elapsed = (now - Number(start)) % DURATION;
-    const left = DURATION - elapsed;
-
-    const h = Math.floor(left / 3_600_000);
-    const m = Math.floor((left % 3_600_000) / 60_000);
-    const s = Math.floor((left % 60_000) / 1000);
-
-    const text = `${pad(h)}:${pad(m)}:${pad(s)}`;
-    targets.forEach(el => el.textContent = text);
-
-    requestAnimationFrame(tick);
+(function () {
+  const box = document.getElementById('timer');
+  if (!box) return;
+  const START = 24 * 60 * 60 - 1; // 23:59:59
+  let t = START;
+  function render() {
+    const h = String(Math.floor(t / 3600)).padStart(2, '0');
+    const m = String(Math.floor((t % 3600) / 60)).padStart(2, '0');
+    const s = String(t % 60).padStart(2, '0');
+    box.textContent = `${h}:${m}:${s}`;
+    t = t <= 0 ? START : t - 1;
   }
-  tick();
+  render();
+  setInterval(render, 1000);
 })();
+
