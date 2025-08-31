@@ -2,21 +2,18 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Курси — Digital Pro Academy</title>
-  <meta name="description" content="Каталог онлайн-курсів від Digital Pro Academy: SMM з нуля (знижка 42%), SMM PRO, AI для маркетологів, Digital-маркетинг. Підтримка, практика, сертифікати з ID. Обери свій курс.">
-  <meta name="keywords" content="smm курси, ai курс, digital курси онлайн, smm з нуля, онлайн навчання маркетинг, академія smm, курс reels, сертифікат з ID">
+  <meta name="description" content="Активні онлайн‑курси: SMM з нуля (старт 20 вересня), SMM PRO, AI для маркетологів, SMM для підлітків (старт 1 жовтня). Підтримка та сертифікат з ID.">
   <link rel="stylesheet" href="style.css" />
   <script defer src="timer.js"></script>
 </head>
 <body>
-<header>
-  <h1>Digital Pro Academy</h1>
+<header class="site-header">
+  <a class="logo" href="index.html"><img src="img/logo.png" alt="Digital Pro Academy"></a>
   <nav>
-    <a href="index.html">Головна</a>
-    <a href="courses.html">Курси</a>
-    <a href="certificates.html">Сертифікати</a>
-    <a href="contacts.html">Контакти</a>
+    <a href="index.html">Головна</a><a href="courses.html">Курси</a>
+    <a href="certificates.html">Сертифікати</a><a href="contacts.html">Контакти</a><a href="zapytannya.html">Запитання</a>
   </nav>
 </header>
 
@@ -24,67 +21,80 @@
   <section class="course-card hot">
     <div class="course-head">
       <h2>SMM з нуля — інтенсив 30 днів</h2>
-      <span class="badge">Знижка -42%</span>
+      <span class="badge">Активний</span>
     </div>
-
-    <p class="lead">Стартуй в SMM без досвіду: стратегія, контент, Reels, таргет. Підтримка куратора, перевірка ДЗ, сертифікат з ID.</p>
-
+    <p class="muted">Старт: <b>20 вересня 2025</b></p>
+    <p class="lead">З нуля до перших платних проєктів за місяць. Підтримка 1:1, сертифікат з ID.</p>
     <div class="price-row">
-      <span class="old">8590 грн</span>
-      <span class="new">5000 грн</span>
+      <span class="old">8590 грн</span><span class="new">5000 грн</span>
+      <span class="countdown">--:--:--</span>
     </div>
-
-    <div class="timer-wrap">
-      <strong>До кінця знижки:</strong>
-      <div id="countdown" class="timer">--:--:--</div>
-      <small>Акція діє до <b>1 вересня, 22:31 UTC</b></small>
-    </div>
-
-    <div class="spots">
-      <div class="bar"><span style="width: 66%"></span></div>
-      <small>10 з 15 місць зайнято</small>
-    </div>
-
     <div class="cta-row">
-      <a class="btn primary" href="#enroll">Записатися зі знижкою</a>
-      <a class="btn ghost" href="contacts.html">Поставити питання</a>
+      <a class="btn primary" href="checkout.html#promo">Купити зараз</a>
+      <a class="btn ghost" href="checkout.html#promo">Оплатити зі знижкою</a>
     </div>
-
-    <details class="program">
-      <summary>Програма (10 модулів)</summary>
-      <ol>
-        <li>Основи SMM та аналітика ніші</li>
-        <li>Контент‑стратегія та календар</li>
-        <li>Дизайн: швидкі шаблони</li>
-        <li>Копірайтинг для соцмереж</li>
-        <li>Reels/Shorts: сценарії та монтаж</li>
-        <li>Stories, інтерактив, прогрів</li>
-        <li>Таргет: базові кампанії</li>
-        <li>Ком’юніті менеджмент</li>
-        <li>Звітність і метрики</li>
-        <li>Портфоліо і вихід на перших клієнтів</li>
-      </ol>
-    </details>
   </section>
 
   <section class="course-card">
-    <h3>SMM PRO</h3>
-    <p>Поглиблений курс для практиків. <strong>Старт: жовтень</strong></p>
-    <a class="btn" href="#">Лист очікування</a>
+    <div class="course-head">
+      <h3>SMM PRO — системний контент та аналітика</h3>
+      <span class="badge">Активний</span>
+    </div>
+    <p class="muted">Старт: <b>1 жовтня 2025</b></p>
+    <p>Системний контент, аналітика, прості воронки, Reels PRO.</p>
+    <div class="price-row"><span class="new">6900 грн</span></div>
+    <div class="cta-row">
+      <a class="btn primary" href="checkout.html?course=SMMPRO#promo">Купити зараз</a>
+      <a class="btn ghost" href="contacts.html">Поставити запитання</a>
+    </div>
   </section>
 
   <section class="course-card">
-    <h3>AI для маркетологів</h3>
-    <p>ChatGPT, промптинг, авто контент‑пайплайни. <strong>Запис відкрито</strong></p>
-    <a class="btn" href="#">Детальніше</a>
+    <div class="course-head">
+      <h3>AI для маркетологів — промптинг та авто‑контент</h3>
+      <span class="badge">Активний</span>
+    </div>
+    <p class="muted">Старт: <b>1 жовтня 2025</b></p>
+    <p>Промпт‑архітектура, AI‑шаблони для постів/Reels, автоматизація звітів.</p>
+    <div class="price-row"><span class="new">6200 грн</span></div>
+    <div class="cta-row">
+      <a class="btn primary" href="checkout.html?course=AI#promo">Купити зараз</a>
+      <a class="btn ghost" href="contacts.html">Поставити запитання</a>
+    </div>
+  </section>
+
+  <section class="course-card">
+    <div class="course-head">
+      <h3>SMM для підлітків 12–16 — безпека та креатив</h3>
+      <span class="badge">Активний</span>
+    </div>
+    <p class="muted">Старт: <b>1 жовтня 2025</b></p>
+    <p>Безпека в соцмережах, сценарії Reels, базовий монтаж, перший міні‑проєкт.</p>
+    <div class="price-row"><span class="new">3500 грн</span></div>
+    <div class="cta-row">
+      <a class="btn primary" href="checkout.html?course=TEENS#promo">Купити зараз</a>
+      <a class="btn ghost" href="contacts.html">Поставити запитання</a>
+    </div>
   </section>
 </main>
 
-<footer>
-  <p>© 2025 Digital Pro Academy</p>
+<footer class="site-footer">
+  <div class="footer-inner container">
+    <div class="footer-col">
+      <h4>Академія</h4>
+      <ul><li><a href="index.html">Головна</a></li><li><a href="courses.html">Курси</a></li><li><a href="certificates.html">Сертифікати</a></li><li><a href="zapytannya.html">Запитання</a></li></ul>
+    </div>
+    <div class="footer-col">
+      <h4>Курси</h4>
+      <ul><li><a href="courses.html">SMM з нуля</a></li><li><a href="courses.html">SMM PRO</a></li><li><a href="courses.html">AI для маркетологів</a></li><li><a href="courses.html">SMM для підлітків</a></li></ul>
+    </div>
+    <div class="footer-col">
+      <h4>Контакти</h4>
+      <ul><li><a href="https://t.me/digital_academy_administrator" target="_blank" rel="noopener">Telegram</a></li><li><a href="mailto:hello.digitalproacademy@gmail.com">hello.digitalproacademy@gmail.com</a></li><li><a href="contacts.html">Форма</a></li></ul>
+    </div>
+  </div>
+  <div class="footer-bottom"><p>© 2025 Digital Pro Academy</p></div>
 </footer>
 
-<!-- Якорь "записатися": замінимо на Telegram або оплату -->
-<div id="enroll"></div>
 </body>
 </html>
