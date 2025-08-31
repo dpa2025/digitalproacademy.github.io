@@ -1,195 +1,153 @@
-/* ====== BASE ====== */
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #111;
-  color: #fff;
+/* ======== BASE / THEME ======== */
+:root{
+  --bg:#111;
+  --panel:#141414;
+  --panel-2:#1b1b1b;
+  --text:#fff;
+  --muted:#b9b9b9;
+  --accent:#FF6000;
+  --accent-2:#e55b00;
+  --stroke:#2a2a2a;
+  --glow: rgba(255,96,0,.18);
 }
 
-a {
-  color: #FF6000;
-  text-decoration: none;
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.55;
 }
 
-strong {
-  color: #FF6000;
+a{color:var(--accent);text-decoration:none}
+a:hover{color:var(--accent-2)}
+strong{color:var(--accent)}
+.muted{color:var(--muted)}
+.container{max-width:1120px;margin:0 auto;padding:24px 16px}
+
+/* ======== HEADER ======== */
+.site-header{
+  position:sticky;top:0;z-index:50;
+  background:#000;border-bottom:1px solid var(--stroke);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px 16px;
+}
+.site-header .logo img{height:56px; display:block}        /* більший логотип */
+nav a{
+  color:#fff;font-weight:600;margin:0 12px;display:inline-block;
+}
+nav a:hover{color:var(--accent)}
+
+/* ======== TYPO ======== */
+h1,h2,h3{margin:0 0 .4em}
+h1{font-size:32px}
+h2{font-size:26px}
+h3{font-size:20px}
+.lead{color:#ddd;max-width:780px;margin:8px auto 0}
+
+/* ======== BUTTONS (fix overlap) ======== */
+.btn, button{
+  display:inline-flex;align-items:center;justify-content:center;
+  gap:8px; cursor:pointer; user-select:none;
+  padding:12px 20px; border-radius:8px; border:1px solid transparent;
+  font-weight:700; font-size:16px; line-height:1;
+  transition:.2s ease;
+}
+.btn + .btn{margin-left:10px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.btn.primary{background:var(--accent);color:#fff}
+.btn.primary:hover{background:var(--accent-2)}
+.btn.ghost{background:transparent;color:#fff;border-color:var(--accent)}
+.btn.ghost:hover{background:rgba(255,96,0,.08)}
+
+/* ======== HERO ======== */
+.hero{padding:48px 16px;text-align:center;background:var(--bg)}
+.hero .btn{margin-top:8px}
+
+/* ======== GRID / CARDS ======== */
+.feature-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:16px;margin-top:18px;
+}
+.course-card{
+  background:var(--panel);
+  border:1px solid var(--stroke);
+  border-radius:14px;
+  padding:18px;
+  box-shadow:0 0 0 1px var(--stroke) inset, 0 0 24px var(--glow); /* м’яка “підсвітка” */
+}
+.course-card.hot{background:linear-gradient(180deg,var(--panel),#121212)}
+.course-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.badge{
+  background:rgba(255,96,0,.12);color:var(--accent);
+  padding:4px 10px;border-radius:999px;font-size:12px;border:1px solid var(--accent);
+}
+.price-row{display:flex;align-items:center;gap:10px;margin:12px 0}
+.price-row .old{color:#888;text-decoration:line-through}
+.price-row .new{color:#fff;font-weight:800}
+.feature-list{margin:10px 0 0;padding:0;list-style:none}
+.feature-list li{position:relative;padding-left:14px;color:#ddd;margin:6px 0}
+.feature-list li::before{
+  content:'';position:absolute;left:0;top:.58em;width:6px;height:6px;
+  background:var(--accent);border-radius:50%;   /* оранжеві “кружочки”‑маркери */
 }
 
-/* ====== HEADER ====== */
-.site-header {
-  background-color: #000;
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+/* ======== TIMER ======== */
+#timer{
+  display:inline-block;min-width:150px;text-align:center;
+  padding:8px 12px;border-radius:10px;
+  border:1px dashed var(--accent);
+  background:rgba(255,96,0,.06);color:#fff;font-weight:800;letter-spacing:.5px;
 }
 
-.site-header .logo img {
-  height: 48px;
+/* ======== REVIEWS (компактні, реалістичні) ======== */
+.reviews{padding:8px 0 28px}
+.reviews-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:16px;
+}
+.review{
+  background:var(--panel-2);border:1px solid var(--stroke);
+  border-radius:12px;padding:14px;display:flex;gap:12px;align-items:flex-start;
+}
+.review img{
+  width:48px;height:48px;border-radius:50%;object-fit:cover;
+  border:2px solid var(--accent)
+}
+.review .who{font-weight:700;margin:0;color:#fff}
+.review p{margin:4px 0 0;color:#d5d5d5;font-size:14.5px}
+
+/* ======== SEPARATORS ======== */
+.section-title{
+  display:flex;align-items:center;gap:10px;margin:28px 0 12px
+}
+.section-title .dot{
+  width:10px;height:10px;border-radius:50%;background:var(--accent);
+  box-shadow:0 0 0 6px rgba(255,96,0,.08);
 }
 
-nav a {
-  margin: 0 15px;
-  font-weight: bold;
-  color: #fff;
+/* ======== FOOTER ======== */
+.site-footer{background:#000;border-top:1px solid var(--stroke);margin-top:28px}
+.footer-inner{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.site-footer h4{color:var(--accent);margin:0 0 8px}
+.site-footer a{color:#cfcfcf}
+.footer-bottom{border-top:1px solid var(--stroke);text-align:center;padding:12px;color:#9a9a9a}
+
+/* ======== FORMS ======== */
+input,textarea{
+  width:100%;padding:12px;border-radius:8px;border:1px solid var(--stroke);
+  background:var(--panel);color:#fff
 }
+input:focus,textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(255,96,0,.16)}
 
-nav a:hover {
-  color: #FF6000;
+/* ======== RESPONSIVE ======== */
+@media (max-width:1024px){
+  .feature-grid{grid-template-columns:repeat(2,1fr)}
+  .reviews-grid{grid-template-columns:repeat(2,1fr)}
 }
-
-/* ====== HERO ====== */
-.hero {
-  padding: 60px 20px;
-  text-align: center;
-  background-color: #111;
-}
-
-.hero h2 {
-  font-size: 32px;
-  color: #fff;
-}
-
-.hero p {
-  font-size: 18px;
-  margin: 10px 0;
-}
-
-/* ====== BUTTONS ====== */
-button, .button, .btn {
-  background: #FF6000;
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  font-size: 16px;
-  font-weight: bold;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-button:hover {
-  background: #e55b00;
-}
-
-/* ====== TIMER ====== */
-#timer {
-  font-size: 24px;
-  font-weight: bold;
-  color: #fff;
-  background-color: transparent;
-  margin: 15px 0;
-}
-
-/* ====== REVIEWS ====== */
-.reviews {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  padding: 40px 20px;
-  background-color: #111;
-}
-
-.review {
-  background-color: #1c1c1c;
-  padding: 20px;
-  border-radius: 10px;
-  max-width: 250px;
-  text-align: center;
-  color: #fff;
-  box-shadow: 0 4px 10px rgba(255, 96, 0, 0.3);
-}
-
-.review img {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 10px;
-  border: 2px solid #FF6000;
-}
-
-/* ====== FOOTER ====== */
-footer {
-  background: #000;
-  color: white;
-  padding: 40px 20px;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-footer h3 {
-  color: #FF6000;
-  margin-bottom: 10px;
-}
-
-footer a {
-  display: block;
-  margin: 6px 0;
-  color: #ccc;
-}
-
-footer a:hover {
-  color: #FF6000;
-}
-
-/* ====== QUESTIONS SECTION (FAQ) ====== */
-details {
-  background: #1c1c1c;
-  border-radius: 8px;
-  margin: 10px 0;
-  padding: 15px 20px;
-  cursor: pointer;
-  color: white;
-}
-
-summary {
-  font-weight: bold;
-  font-size: 17px;
-  color: #FF6000;
-}
-
-details[open] {
-  border: 1px solid #FF6000;
-}
-
-/* ====== FORMS ====== */
-input, textarea {
-  width: 100%;
-  padding: 12px;
-  margin-top: 10px;
-  border: 1px solid #333;
-  background-color: #1c1c1c;
-  color: white;
-  border-radius: 6px;
-}
-
-input:focus, textarea:focus {
-  border-color: #FF6000;
-  outline: none;
-}
-
-/* ====== MEDIA ====== */
-@media screen and (max-width: 768px) {
-  .site-header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  nav {
-    margin-top: 10px;
-  }
-
-  .reviews {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  footer {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+@media (max-width:720px){
+  .site-header{flex-direction:column;align-items:flex-start;gap:8px}
+  .feature-grid{grid-template-columns:1fr}
+  .reviews-grid{grid-template-columns:1fr}
+  .btn + .btn{margin-left:0}
 }
