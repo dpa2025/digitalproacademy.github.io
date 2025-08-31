@@ -73,3 +73,14 @@ input:focus,textarea:focus,select:focus{outline:none;border-color:var(--accent);
 /* ======== RESPONSIVE ======== */
 @media (max-width:1024px){.feature-grid{grid-template-columns:repeat(2,1fr)} .reviews-grid{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:720px){.site-header{flex-direction:column;align-items:flex-start;gap:8px} .feature-grid{grid-template-columns:1fr} .reviews-grid{grid-template-columns:1fr} .form-row{grid-template-columns:1fr}}
+/* Certificate preview size */
+.cert-img{
+  display:block;
+  max-width:900px;       /* можно 800–1000, подбери как нравится */
+  width:100%;
+  height:auto;
+  margin:8px auto 0;     /* центрируем */
+  border-radius:12px;
+  border:1px solid var(--stroke);
+  box-shadow:0 8px 24px rgba(0,0,0,.35);
+}
