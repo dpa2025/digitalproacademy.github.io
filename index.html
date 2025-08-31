@@ -4,11 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Digital Pro Academy — SMM та AI-курси</title>
-  <meta name="description" content="SMM та AI-курси з практикою, вебінари, PDF‑гайди й шаблони. Акція 1+1=3. Оплата й доступи — у Telegram.">
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Онлайн-курс SMM з нуля за 30 днів: контент, Reels/Shorts, таргет, аналітика. Перевірка ДЗ, підтримка куратора, сертифікат з унікальним ID. Акція 1+1=3 у магазині." />
+  <link rel="stylesheet" href="style.css" />
   <script defer src="timer.js"></script>
 </head>
 <body>
+
 <header class="site-header">
   <a class="logo" href="index.html"><img src="img/logo.png" alt="Digital Pro Academy"></a>
   <nav>
@@ -22,30 +23,37 @@
 </header>
 
 <main class="container">
-  <!-- HERO -->
-  <section class="hero">
-    <h1>Освой SMM за 30 днів і запусти перші платні проєкти</h1>
-    <p class="lead">Стратегія, контент‑план, Reels/Shorts, базовий таргет. Підтримка куратора, перевірка ДЗ і сертифікат з ID.</p>
 
-    <div class="price-row">
-      <span class="old">8590 грн</span><span class="new">5000 грн</span><span id="timer">23:59:59</span>
+  <!-- HERO: продаючий блок -->
+  <section class="hero">
+    <h1>Почни заробляти на контенті за 1 місяць. Навчись SMM з нуля</h1>
+    <p class="lead">Онлайн-курс з нуля: контент, Reels/Shorts, таргет, аналітика. Перевірка ДЗ, підтримка куратора і сертифікат з унікальним ID.</p>
+    <p><strong>Залишилось лише 5 місць — далі лист очікування</strong></p>
+
+    <div class="price-row" style="justify-content:center; gap:14px; margin-top:14px">
+      <span class="old">8590 грн</span>
+      <span class="new" style="font-size:22px">5000 грн</span>
+      <span class="badge" aria-label="Знижка 42%">‑42%</span>
+      <span id="timer" title="Кінець знижки (цикл) — оновлюється щосекунди">23:59:59</span>
     </div>
 
-    <div class="cta-row" style="justify-content:center">
+    <div class="cta-row" style="justify-content:center; margin-top:10px">
       <a class="btn primary" href="checkout.html">Оплатити зі знижкою</a>
       <a class="btn ghost" href="courses.html">Подивитись всі курси</a>
     </div>
 
     <ul class="feature-list" style="display:inline-block;text-align:left;margin-top:18px">
-      <li>Практика та ДЗ</li><li>Підтримка 1:1</li><li>Сертифікат з ID</li>
+      <li>Практика + перевірка домашніх</li>
+      <li>Підтримка куратора 1:1</li>
+      <li>Сертифікат з унікальним ID</li>
     </ul>
   </section>
 
-  <!-- TEASER 1+1=3 -->
-  <section class="course-card hot">
+  <!-- TEASER: Акція 1+1=3 -->
+  <section class="course-card hot" style="text-align:center">
     <h2>Акція 1+1=3</h2>
     <p class="lead">Обирай будь‑які два продукти з магазину — третій отримаєш у подарунок 🧡</p>
-    <div class="cta-row">
+    <div class="cta-row" style="justify-content:center">
       <a class="btn primary" target="_blank" rel="noopener"
          href="https://t.me/digital_academy_administrator?text=Привіт! Хочу оформити акцію 1%2B1%3D3 у магазині DPA.">
          Оформити в Telegram
@@ -54,34 +62,48 @@
     </div>
   </section>
 
-  <!-- ВЕБІНАРИ ТОП -->
+  <!-- ВЕБІНАРИ TOP -->
   <div class="section-title"><span class="dot"></span><h2>Вебінари</h2></div>
   <section class="feature-grid">
     <article class="course-card">
-      <div class="course-head"><h3>Reels/Shorts, що продають</h3><span class="badge">Вебінар</span></div>
+      <div class="course-head">
+        <h3>Reels/Shorts, що продають</h3><span class="badge">Вебінар</span>
+      </div>
       <p>Хук‑формули, сценарії, чек‑лист монтажу. Запис + матеріали.</p>
       <div class="price-row"><span class="new">690 грн</span></div>
       <div class="cta-row">
-        <a class="btn primary" target="_blank" rel="noopener" href="https://t.me/digital_academy_administrator?text=WEB‑SMM‑REELS 690 грн — оформити.">Купити в Telegram</a>
-        <a class="btn ghost" target="_blank" rel="noopener" href="https://t.me/digital_academy_administrator?text=Питання щодо WEB‑SMM‑REELS">Питання</a>
+        <a class="btn primary" target="_blank" rel="noopener"
+           href="https://t.me/digital_academy_administrator?text=WEB‑SMM‑REELS 690 грн — оформити.">Купити в Telegram</a>
+        <a class="btn ghost" target="_blank" rel="noopener"
+           href="https://t.me/digital_academy_administrator?text=Питання щодо WEB‑SMM‑REELS">Питання</a>
       </div>
     </article>
+
     <article class="course-card">
-      <div class="course-head"><h3>AI‑контент без води</h3><span class="badge">Вебінар</span></div>
+      <div class="course-head">
+        <h3>AI‑контент без води</h3><span class="badge">Вебінар</span>
+      </div>
       <p>Промпт‑системи, контент‑плани з AI, шаблони для постів і рілсів.</p>
       <div class="price-row"><span class="new">690 грн</span></div>
       <div class="cta-row">
-        <a class="btn primary" target="_blank" rel="noopener" href="https://t.me/digital_academy_administrator?text=WEB‑AI‑CONTENT 690 грн — оформити.">Купити в Telegram</a>
-        <a class="btn ghost" target="_blank" rel="noopener" href="https://t.me/digital_academy_administrator?text=Питання щодо WEB‑AI‑CONTENT">Питання</a>
+        <a class="btn primary" target="_blank" rel="noopener"
+           href="https://t.me/digital_academy_administrator?text=WEB‑AI‑CONTENT 690 грн — оформити.">Купити в Telegram</a>
+        <a class="btn ghost" target="_blank" rel="noopener"
+           href="https://t.me/digital_academy_administrator?text=Питання щодо WEB‑AI‑CONTENT">Питання</a>
       </div>
     </article>
+
     <article class="course-card">
-      <div class="course-head"><h3>Аналітика SMM: TL;DR</h3><span class="badge">Вебінар</span></div>
+      <div class="course-head">
+        <h3>Аналітика SMM: TL;DR</h3><span class="badge">Вебінар</span>
+      </div>
       <p>KPI, UTM, прості дашборди, що показують результат.</p>
       <div class="price-row"><span class="new">690 грн</span></div>
       <div class="cta-row">
-        <a class="btn primary" target="_blank" rel="noopener" href="https://t.me/digital_academy_administrator?text=WEB‑ANALYTICS 690 грн — оформити.">Купити в Telegram</a>
-        <a class="btn ghost" target="_blank" rel="noopener" href="https://t.me/digital_academy_administrator?text=Питання щодо WEB‑ANALYTICS">Питання</a>
+        <a class="btn primary" target="_blank" rel="noopener"
+           href="https://t.me/digital_academy_administrator?text=WEB‑ANALYTICS 690 грн — оформити.">Купити в Telegram</a>
+        <a class="btn ghost" target="_blank" rel="noopener"
+           href="https://t.me/digital_academy_administrator?text=Питання щодо WEB‑ANALYTICS">Питання</a>
       </div>
     </article>
   </section>
@@ -90,20 +112,59 @@
   <section class="reviews container">
     <div class="section-title"><span class="dot"></span><h2>Відгуки студентів</h2></div>
     <div class="reviews-grid">
-      <article class="review"><img src="img/olena.png" alt="Олена В."><div><p class="who">Олена В.</p><p>За 2 тижні зробила перший SMM‑проєкт. Дуже структуровано.</p></div></article>
-      <article class="review"><img src="img/iryna.jpg" alt="Ірина К."><div><p class="who">Ірина К.</p><p>SMM PRO систематизував процеси. Рекомендую!</p></div></article>
-      <article class="review"><img src="img/anton.jpg" alt="Антон Д."><div><p class="who">Антон Д.</p><p>AI‑шаблони зекономили 5–7 годин щотижня. Контент роблю швидше.</p></div></article>
+      <article class="review">
+        <img src="img/olena.png" alt="Олена В.">
+        <div>
+          <p class="who">Олена В.</p>
+          <p>За 2 тижні зробила перший SMM‑проєкт. Дуже структуровано.</p>
+        </div>
+      </article>
+      <article class="review">
+        <img src="img/iryna.jpg" alt="Ірина К.">
+        <div>
+          <p class="who">Ірина К.</p>
+          <p>SMM PRO систематизував процеси. Рекомендую!</p>
+        </div>
+      </article>
+      <article class="review">
+        <img src="img/anton.jpg" alt="Антон Д.">
+        <div>
+          <p class="who">Антон Д.</p>
+          <p>AI‑шаблони зекономили 5–7 годин щотижня. Контент роблю швидше.</p>
+        </div>
+      </article>
     </div>
   </section>
+
 </main>
 
 <footer class="site-footer">
   <div class="footer-inner container">
-    <div class="footer-col"><h4>Академія</h4><ul><li><a href="index.html">Головна</a></li><li><a href="courses.html">Курси</a></li><li><a href="shop.html">Магазин</a></li><li><a href="zapytannya.html">Запитання</a></li></ul></div>
-    <div class="footer-col"><h4>Контакти</h4><ul><li><a target="_blank" rel="noopener" href="https://t.me/digital_academy_administrator">Telegram</a></li><li><a href="mailto:hello.digitalproacademy@gmail.com">Email</a></li></ul></div>
-    <div class="footer-col"><h4>Сертифікати</h4><ul><li><a href="certificates.html">Перевірити сертифікат</a></li></ul></div>
+    <div class="footer-col">
+      <h4>Академія</h4>
+      <ul>
+        <li><a href="index.html">Головна</a></li>
+        <li><a href="courses.html">Курси</a></li>
+        <li><a href="shop.html">Магазин</a></li>
+        <li><a href="zapytannya.html">Запитання</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Контакти</h4>
+      <ul>
+        <li><a target="_blank" rel="noopener" href="https://t.me/digital_academy_administrator">Telegram</a></li>
+        <li><a href="mailto:hello.digitalproacademy@gmail.com">Email</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Сертифікати</h4>
+      <ul>
+        <li><a href="certificates.html">Перевірити сертифікат</a></li>
+      </ul>
+    </div>
   </div>
   <div class="footer-bottom"><p>© 2025 Digital Pro Academy</p></div>
 </footer>
+
 </body>
 </html>
