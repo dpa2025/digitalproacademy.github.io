@@ -3,43 +3,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Digital Pro Academy — SMM з нуля, AI та Digital</title>
-  <meta name="description" content="Практичні онлайн‑курси: SMM з нуля, SMM PRO, AI для маркетологів. Підтримка куратора, домашні завдання, сертифікат з ID. Стартуй сьогодні зі знижкою!">
-  <meta name="keywords" content="smm з нуля, smm курс, digital курс, ai для маркетолога, онлайн академія">
+  <title>Digital Pro Academy — SMM з нуля, PRO та AI</title>
+  <meta name="description" content="Практичні онлайн‑курси: SMM з нуля, SMM PRO, AI для маркетологів та SMM для підлітків. Підтримка куратора, ДЗ, сертифікат з ID. Старт програм — вересень/жовтень.">
   <link rel="stylesheet" href="style.css" />
   <script defer src="timer.js"></script>
 </head>
 <body>
-<header>
-  <h1>Digital Pro Academy</h1>
+
+<header class="site-header">
+  <a class="logo" href="index.html"><img src="img/logo.png" alt="Digital Pro Academy"></a>
   <nav>
     <a href="index.html">Головна</a>
     <a href="courses.html">Курси</a>
     <a href="certificates.html">Сертифікати</a>
     <a href="contacts.html">Контакти</a>
-    <a href="faq.html">FAQ</a>
+    <a href="zapytannya.html">Запитання</a>
   </nav>
 </header>
 
 <main>
-  <!-- HERO з сильним CTA -->
-  <section class="hero hero-home">
-    <h2>Освой SMM за 30 днів <br class="br-sm">та запусти перші проєкти</h2>
-    <p class="sub">Курс “SMM з нуля”: стратегія, контент, Reels, таргет. Підтримка куратора + сертифікат з унікальним ID.</p>
+  <section class="hero-home">
+    <h2>Освой SMM за 30 днів і запусти перші платні проєкти</h2>
+    <p class="sub">Стратегія, контент‑план, Reels/Shorts, базовий таргет. Підтримка куратора, перевірка ДЗ і сертифікат з ID.</p>
 
-    <div class="price-row center">
+    <div class="price-row" style="justify-content:center">
       <span class="old">8590 грн</span>
       <span class="new">5000 грн</span>
-      <span class="badge">Знижка -42%</span>
+      <span class="badge">Знижка</span>
+      <span class="countdown" aria-label="Циклічний таймер знижки">--:--:--</span>
     </div>
 
-    <div class="timer-wrap center">
-      <strong>До кінця знижки:</strong>
-      <div id="countdown" class="timer">--:--:--</div>
-    </div>
-
-    <div class="cta-row center">
-      <a class="btn primary big" href="checkout.html">Оплатити зі знижкою</a>
+    <div class="cta-row" style="justify-content:center">
+      <a class="btn primary big" href="checkout.html#promo">Купити зараз</a>
       <a class="btn ghost big" href="courses.html">Подивитися всі курси</a>
     </div>
 
@@ -50,7 +45,6 @@
     </div>
   </section>
 
-  <!-- Короткі переваги -->
   <section class="container">
     <div class="feature-grid">
       <div class="feature">
@@ -63,36 +57,46 @@
       </div>
       <div class="feature">
         <h3>Результат у портфоліо</h3>
-        <p>Фінальний проєкт + сертифікат з унікальним ID для резюме й LinkedIn.</p>
+        <p>Фінальний проєкт + сертифікат з унікальним ID для резюме та LinkedIn.</p>
       </div>
     </div>
   </section>
 
-  <!-- Прев’ю відгуків -->
   <section class="container course-card">
     <h2>Відгуки студентів</h2>
-    <div class="reviews">
-      <blockquote>
-        <p>“Вже за 2 тижні зробила перший SMM‑проєкт. Дуже структуровано!”</p>
-        <footer>— Олена Б.</footer>
-      </blockquote>
-      <blockquote>
-        <p>“Куратор реально допомагав і перевіряв ДЗ. Рекомендую!”</p>
-        <footer>— Ірина М.</footer>
-      </blockquote>
-      <blockquote>
-        <p>“Сертифікат з ID допоміг на співбесіді. Курс — вогонь.”</p>
-        <footer>— Марина К.</footer>
-      </blockquote>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-head">
+          <img src="img/olena.png" alt="Олена — відгук">
+          <div><div class="review-name">Олена Б.</div><div class="muted">SMM з нуля</div></div>
+        </div>
+        <div class="review-text">Вже за 2 тижні взяла перший SMM‑проєкт. Структура і підтримка — топ!</div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-head">
+          <img src="img/iryna.jpg" alt="Ірина — відгук">
+          <div><div class="review-name">Ірина М.</div><div class="muted">SMM PRO</div></div>
+        </div>
+        <div class="review-text">Reels дали 10К переглядів і 3 заявки клієнту за 5 днів.</div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-head">
+          <img src="img/marina.jpg" alt="Марина — відгук">
+          <div><div class="review-name">Марина К.</div><div class="muted">SMM з нуля</div></div>
+        </div>
+        <div class="review-text">Сертифікат з ID допоміг на співбесіді — офер наступного дня.</div>
+      </div>
     </div>
+
     <div class="cta-row">
-      <a class="btn primary" href="faq.html">Більше відповідей і відгуків</a>
-      <a class="btn ghost" href="contacts.html">Поставити запитання</a>
+      <a class="btn primary" href="zapytannya.html">Ще запитань та відгуків</a>
+      <a class="btn ghost" href="checkout.html#promo">Купити зараз</a>
     </div>
   </section>
 </main>
 
-<!-- Розширений футер з навігацією -->
 <footer class="site-footer">
   <div class="footer-inner container">
     <div class="footer-col">
@@ -101,7 +105,7 @@
         <li><a href="index.html">Головна</a></li>
         <li><a href="courses.html">Курси</a></li>
         <li><a href="certificates.html">Сертифікати</a></li>
-        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="zapytannya.html">Запитання</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -110,6 +114,7 @@
         <li><a href="courses.html">SMM з нуля</a></li>
         <li><a href="courses.html">SMM PRO</a></li>
         <li><a href="courses.html">AI для маркетологів</a></li>
+        <li><a href="courses.html">SMM для підлітків</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -121,9 +126,9 @@
       </ul>
     </div>
   </div>
-  <div class="footer-bottom">
-    <p>© 2025 Digital Pro Academy</p>
-  </div>
+  <div class="footer-bottom"><p>© 2025 Digital Pro Academy</p></div>
 </footer>
+
 </body>
 </html>
+
