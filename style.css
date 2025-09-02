@@ -102,3 +102,27 @@ input:focus,textarea:focus,select:focus{outline:none;border-color:var(--accent);
   50%  { box-shadow: 0 0 18px rgba(255,31,31,1); }
   100% { box-shadow: 0 0 5px rgba(255,31,31,0.4); }
 }
+/* ==== Header brand text біля лого ==== */
+.header-left{display:flex;align-items:center;gap:12px}
+.logo img{height:56px;display:block}          /* можна змінити на 48px при потребі */
+.brand-name{
+  font-size:22px;font-weight:700;color:#fff;
+  text-transform:uppercase;letter-spacing:.5px;line-height:1.2;
+  white-space:nowrap
+}
+@media (max-width:720px){
+  .brand-name{font-size:15px;max-width:140px;white-space:normal}
+  .logo img{height:44px}
+}
+
+/* ==== Sticky CTA (якщо використовуєш блок унизу сторінки) ==== */
+.sticky-cta{
+  position:fixed;left:0;right:0;bottom:0;background:rgba(17,17,17,.92);
+  backdrop-filter:saturate(140%) blur(6px);padding:10px 14px;z-index:9999;
+  box-shadow:0 -4px 14px rgba(0,0,0,.35)
+}
+.sticky-cta .cta-button{
+  display:block;max-width:560px;margin:0 auto;text-align:center;
+  background:var(--accent);color:#fff;padding:14px 18px;border-radius:12px;
+  font-weight:800;text-decoration:none
+}
