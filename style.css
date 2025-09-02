@@ -84,3 +84,21 @@ input:focus,textarea:focus,select:focus{outline:none;border-color:var(--accent);
   border:1px solid var(--stroke);
   box-shadow:0 8px 24px rgba(0,0,0,.35);
 }
+#timer {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-weight: 800;
+  font-size: 20px;
+  background-color: #111;
+  color: #FF1F1F; /* Червоний */
+  border: 2px solid #FF1F1F;
+  box-shadow: 0 0 10px rgba(255, 31, 31, 0.7);
+  animation: timerPulseAlways 1s ease-in-out infinite;
+}
+
+@keyframes timerPulseAlways {
+  0%   { box-shadow: 0 0 5px rgba(255,31,31,0.4); }
+  50%  { box-shadow: 0 0 18px rgba(255,31,31,1); }
+  100% { box-shadow: 0 0 5px rgba(255,31,31,0.4); }
+}
