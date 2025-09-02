@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <title>Дякуємо! | Digital Pro Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google tag (якщо вже стоїть у тебе — можна залишити тільки в index, але тут теж ок) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17521755513"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config','AW-17521755513');
+
+    // маркуємо м’який лід
+    gtag('event','lead_telegram',{
+      event_category:'engagement',
+      event_label:'thankyou_open'
+    });
+
+    // автівідкриття Telegram через 2.2с
+    setTimeout(() => {
+      window.open('https://t.me/digital_academy_administrator', '_blank');
+    }, 2200);
+  </script>
+
+  <style>
+    /* легкий центрований екран під твій стиль */
+    body{background:#111;color:#fff;font-family:'Segoe UI',system-ui,Arial,sans-serif}
+    .wrap{max-width:760px;margin:0 auto;padding:64px 20px;text-align:center}
+    .h1{font-size:34px;font-weight:900;margin:0 0 10px;color:var(--accent,#FF6000)}
+    .p{font-size:18px;line-height:1.6;color:#d0d0d0;margin:6px 0}
+    .bonus{background:rgba(255,96,0,.1);border:1px solid rgba(255,96,0,.5);padding:14px 16px;border-radius:12px;margin:18px 0;color:#fff}
+    .btn-big{display:inline-block;background:#FF6000;color:#fff;padding:16px 22px;border-radius:14px;font-weight:800;text-decoration:none}
+    .pulse{animation:pulse 1.4s infinite}
+    @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,96,0,.55)}70%{box-shadow:0 0 0 22px rgba(255,96,0,0)}100%{box-shadow:0 0 0 0 rgba(255,96,0,0)}}
+    .sub{color:#8c8c8c;margin-top:22px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="h1">💬 Дякуємо за звернення!</div>
+    <p class="p">Ми вже на зв’язку. Куратор відповість у Telegram найближчим часом.</p>
+
+    <div class="bonus">
+      <strong>🎁 Бонус тільки зараз:</strong> оплата протягом 1 години — 
+      <em>набір шаблонів + 10% кешбек</em> на наступне навчання.
+    </div>
+
+    <a class="btn-big pulse" href="https://t.me/digital_academy_administrator" target="_blank">
+      Відкрити Telegram зараз
+    </a>
+
+    <p class="sub">Якщо Telegram не відкрився автоматично — натисніть кнопку вище.</p>
+  </div>
+</body>
+</html>
