@@ -107,12 +107,9 @@
       <div id="t" class="mini-timer" aria-live="polite">01:00:00</div>
     </div>
 
-    <!-- Кнопка: тригерить конверсію і відкриває Telegram -->
-    <a class="btn-big pulse"
-       href="https://t.me/digital_academy_administrator"
-       onclick="return gtag_report_conversion('https://t.me/digital_academy_administrator')">
-      Відкрити Telegram зараз
-    </a>
+    <a class="btn-big pulse" href="#" onclick="fbq('track', 'CompleteRegistration', {value: 5, currency: 'UAH'}); return false;">
+  Відкрити Telegram зараз
+</a>
 
     <p class="sub">Telegram відкриється автоматично. Якщо ні — натисніть кнопку вище 👆</p>
   </div>
