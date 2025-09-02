@@ -16,7 +16,7 @@
     gtag('config', 'AW-17521755513');
   </script>
 
-  <!-- ✅ Код для відстеження конверсії -->
+  <!-- ✅ Код для відстеження конверсії (залишили, але НЕ викликаємо редирект) -->
   <script>
     function gtag_report_conversion(url) {
       var callback = function () {
@@ -89,17 +89,9 @@
 
 <body>
 
-  <!-- ✅ Meta Pixel CompleteRegistration Event -->
-  <script>
-    fbq('track', 'CompleteRegistration', {
-      value: 5,
-      currency: 'UAH',
-    });
-  </script>
-
   <div class="wrap">
     <h1>💬 Дякуємо за звернення!</h1>
-    <p>Наш куратор вже чекає на ваше повідомлення у Telegram.</p>
+    <p>Наш куратор отримав ваш запит.</p>
 
     <div class="bonus">
       <strong>🎁 Бонус тільки зараз:</strong> оплатіть курс протягом 1 години — отримаєте
@@ -107,18 +99,37 @@
       <div id="t" class="mini-timer" aria-live="polite">01:00:00</div>
     </div>
 
-    <a class="btn-big pulse" href="#" onclick="fbq('track', 'CompleteRegistration', {value: 5, currency: 'UAH'}); return false;">
-  Відкрити Telegram зараз
-</a>
+    <!-- Кнопка: фіксує подію в Meta, НІЧОГО не відкриває -->
+    <a id="tgBtn" class="btn-big pulse" href="#" onclick="return markComplete();">
+      Відкрити Telegram зараз
+    </a>
 
-    <p class="sub">Telegram відкриється автоматично. Якщо ні — натисніть кнопку вище 👆</p>
+    <p id="note" class="sub">Клік зафіксовано — Telegram відкриємо пізніше.</p>
   </div>
 
   <script>
-    // Автовідкриття Telegram через 25.2 с
-    setTimeout(() => {
-      gtag_report_conversion('https://t.me/digital_academy_administrator');
-    }, 2200);
+    // ❌ Прибрано автоперехід у Telegram (було setTimeout + gtag_report_conversion)
+
+    // ✅ Подія CompleteRegistration — ТІЛЬКИ по кліку
+    function markComplete(){
+      try {
+        fbq('track', 'CompleteRegistration', { value: 5, currency: 'UAH' });
+      } catch(e) {}
+
+      const btn = document.getElementById('tgBtn');
+      if (btn){
+        btn.classList.remove('pulse');
+        btn.textContent = 'Дякуємо! Клік зафіксовано';
+        btn.setAttribute('aria-disabled','true');
+        btn.style.pointerEvents = 'none';
+        btn.style.opacity = '0.8';
+      }
+      const note = document.getElementById('note');
+      if (note){
+        note.textContent = 'Готово! Подію зафіксовано. Telegram відкриємо пізніше.';
+      }
+      return false; // не навігувати
+    }
 
     // Таймер зворотного відліку на 1 годину
     (function(){
@@ -138,3 +149,4 @@
   </script>
 </body>
 </html>
+
