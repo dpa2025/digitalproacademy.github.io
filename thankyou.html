@@ -7,50 +7,61 @@
   <meta name="robots" content="noindex" />
   <link rel="stylesheet" href="style.css" />
 
- <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17521755513">
-</script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- ✅ Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17521755513"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'AW-17521755513');
+  </script>
 
-  gtag('config', 'AW-17521755513');
-</script>
+  <!-- ✅ Код для відстеження конверсії -->
+  <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) !== 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+        'send_to': 'AW-17521755513/cEkLCPqVi5MbEPmKg6NB',
+        'event_callback': callback
+      });
+      return false;
+    }
+  </script>
 
   <style>
-    /* Мінімальні стилі під ваш темний стиль */
     :root{ --accent:#FF6000; }
-    body{
+    body {
       background:#111; color:#fff; font-family:'Segoe UI',system-ui,Arial,sans-serif;
       margin:0; padding:64px 20px; text-align:center;
     }
     .wrap{ max-width:760px; margin:0 auto; }
     h1{ font-size:34px; font-weight:900; margin:0 0 10px; color:var(--accent); }
     p{ font-size:18px; color:#d0d0d0; margin:8px 0; }
-    .bonus{
+    .bonus {
       background:rgba(255,96,0,.08); border:1px solid rgba(255,96,0,.4);
       padding:16px; border-radius:12px; margin:20px 0; color:#fff;
     }
-    .btn-big{
+    .btn-big {
       display:inline-block; background:var(--accent); color:#fff; text-decoration:none;
       padding:16px 26px; border-radius:14px; font-weight:800; margin-top:10px;
     }
     .pulse{ animation:pulse 1.4s infinite; }
-    @keyframes pulse{
+    @keyframes pulse {
       0%{ box-shadow:0 0 0 0 rgba(255,96,0,.55); }
       70%{ box-shadow:0 0 0 22px rgba(255,96,0,0); }
       100%{ box-shadow:0 0 0 0 rgba(255,96,0,0); }
     }
     .sub{ color:#888; margin-top:24px; font-size:14px; }
-
-    /* Маленький таймер-urgency (косметичний) */
-    .mini-timer{
+    .mini-timer {
       display:inline-block; margin-top:10px; padding:8px 12px; border-radius:10px;
       border:2px solid #FF1F1F; color:#FF1F1F; font-weight:800; background:#111;
       box-shadow:0 0 10px rgba(255,31,31,.7); animation:blink 1s ease-in-out infinite;
     }
-    @keyframes blink{
+    @keyframes blink {
       0%,100%{ box-shadow:0 0 6px rgba(255,31,31,.4); }
       50%{ box-shadow:0 0 18px rgba(255,31,31,1); }
     }
@@ -67,7 +78,10 @@
       <div id="t" class="mini-timer" aria-live="polite">01:00:00</div>
     </div>
 
-    <a class="btn-big pulse" href="https://t.me/digital_academy_administrator" target="_blank">
+    <!-- Кнопка: тригерить конверсію і відкриває Telegram -->
+    <a class="btn-big pulse"
+       href="https://t.me/digital_academy_administrator"
+       onclick="return gtag_report_conversion('https://t.me/digital_academy_administrator')">
       Відкрити Telegram зараз
     </a>
 
@@ -75,19 +89,18 @@
   </div>
 
   <script>
-    // Автовідкриття Telegram через 2200 мс (якщо попапи блокуються, лишається кнопка)
+    // Автовідкриття Telegram через 2.2 с
     setTimeout(() => {
-      const w = window.open('https://t.me/digital_academy_administrator', '_blank');
-      if(!w){ /* якщо блокер попапів – нічого, лишаємо кнопку */ }
+      gtag_report_conversion('https://t.me/digital_academy_administrator');
     }, 2200);
 
-    // Косметичний зворотний відлік 1 година (для підсилення urgency на цій сторінці)
+    // Таймер зворотного відліку на 1 годину
     (function(){
       const el = document.getElementById('t'); if(!el) return;
-      let left = 60*60; // секунди
+      let left = 60*60;
       const pad = n => String(n).padStart(2,'0');
       function tick(){
-        if(left <= 0){ left = 60*60; }         // циклічно по 1 годині
+        if(left <= 0){ left = 60*60; }
         const h = Math.floor(left/3600);
         const m = Math.floor((left%3600)/60);
         const s = left%60;
@@ -97,10 +110,5 @@
       tick(); setInterval(tick, 1000);
     })();
   </script>
-</body>
-</html>
-
-    <p class="sub">Якщо Telegram не відкрився автоматично — натисніть кнопку вище.</p>
-  </div>
 </body>
 </html>
