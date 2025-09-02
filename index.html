@@ -4,6 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Digital Pro Academy — SMM та AI-курси</title>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17521755513"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17521755513');
+  </script>
+
   <meta name="description" content="Онлайн-курс SMM з нуля за 30 днів: контент, Reels/Shorts, таргет, аналітика. Перевірка ДЗ, підтримка куратора, сертифікат з унікальним ID. Акція 1+1=3 у магазині." />
   <link rel="stylesheet" href="style.css" />
   <script defer src="timer.js"></script>
@@ -83,7 +93,11 @@
     </div>
 
     <div class="cta-row" style="justify-content:center; margin-top:10px">
-      <a class="btn primary" href="checkout.html">Оплатити зі знижкою</a>
+      <!-- TOP CTA → thankyou + трекінг -->
+      <a class="btn primary" href="thankyou.html"
+         onclick="window.gtag && gtag('event','lead_telegram',{event_category:'engagement',event_label:'top_cta_click'})">
+         Оплатити зі знижкою
+      </a>
       <a class="btn ghost" href="courses.html">Подивитись всі курси</a>
     </div>
 
