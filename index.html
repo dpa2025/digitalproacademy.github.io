@@ -211,9 +211,12 @@
   <div class="footer-bottom"><p>© 2025 Digital Pro Academy</p></div>
 </footer>
 
-<!-- Sticky CTA в самому кінці (завжди видно) -->
+<!-- Sticky CTA → thankyou -->
 <div class="sticky-cta">
-  <a class="cta-button" href="checkout.html">Оплатити зі знижкою</a>
+  <a class="cta-button" href="thankyou.html"
+     onclick="window.gtag && gtag('event','lead_telegram',{event_category:'engagement',event_label:'sticky_cta_click'})">
+     Оплатити зі знижкою
+  </a>
 </div>
 
 </body>
